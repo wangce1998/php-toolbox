@@ -1,6 +1,8 @@
 {
     "name": "wangce1998/php-toolbox",
+    "type": "library",
     "description": "PHP工具包",
+    "license": "MIT",
     "authors": [
         {
             "name": "wangce",
