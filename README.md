@@ -11,6 +11,9 @@ repositories[]中添加
     "url": "https://github.com/wangce1998/php-toolbox.git"
 }
 
+config中添加
+"secure-http": false
+
 更新
 composer update wangce1998/php-toolbox
 ```
