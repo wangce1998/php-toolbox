@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPToolbox;
+namespace Toolbox;
 
 class Json
 {
