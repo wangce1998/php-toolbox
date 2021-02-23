@@ -3,7 +3,7 @@
 ### 直接引入方法
 ```text
 require中添加
-"wangce1998/toolbox": "dev-master"
+"wangce1998/php-toolbox": "dev-master"
 
 repositories[]中添加
 {

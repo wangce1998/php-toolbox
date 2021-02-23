@@ -1,5 +1,5 @@
 {
-    "name": "wangce1998/toolbox",
+    "name": "wangce1998/php-toolbox",
     "type": "library",
     "description": "PHP工具包",
     "license": "MIT",
@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Toolbox\\": "src/"
+            "PHPToolbox\\": "src/"
         }
     }
 }
