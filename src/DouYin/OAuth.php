@@ -34,7 +34,7 @@ class OAuth
             'code'          => $code,
             'grant_type'    => 'authorization_code'
         ];
-        $url = Config::DOMAIN . 'oauth/access_token?' . http_build_query($params);
+        $url = Config::DOMAIN . '/oauth/access_token?' . http_build_query($params);
         $response = $this->request('GET', $url);
         $content = $response->getBody()->getContents();
         $contentArr = Json::decode($content);
