@@ -98,7 +98,10 @@ class OAuth
      * @return ResponseInterface
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    protected function request(string $method, string $url, array $options = []): ResponseInterface
+    protected function request(string $method, string $url, array $options = [
+        'http_errors' => false,
+        'verify'      => false
+    ]): ResponseInterface
     {
         return $this->client->request(strtoupper($method), $url, $options);
     }
