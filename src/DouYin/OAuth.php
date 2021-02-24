@@ -40,7 +40,7 @@ class OAuth
             'code'          => $code,
             'grant_type'    => 'authorization_code'
         ];
-        $url = Config::DOMAIN . '/oauth/access_token?' . http_build_query($params);
+        $url = Config::DOMAIN . '/oauth/access_token/?' . http_build_query($params);
         $response = $this->request('GET', $url);
         $content = $response->getBody()->getContents();
 
@@ -61,7 +61,7 @@ class OAuth
             'refresh_token' => $refreshToken,
             'grant_type'    => 'refresh_token'
         ];
-        $url = Config::DOMAIN . '/oauth/refresh_token?' . http_build_query($params);
+        $url = Config::DOMAIN . '/oauth/refresh_token/?' . http_build_query($params);
         $response = $this->request('GET', $url);
         $content = $response->getBody()->getContents();
 
@@ -82,7 +82,7 @@ class OAuth
             'open_id'      => $openid,
             'access_token' => $accessToken
         ];
-        $url = Config::DOMAIN . '/oauth/userinfo?' . http_build_query($params);
+        $url = Config::DOMAIN . '/oauth/userinfo/?' . http_build_query($params);
         $response = $this->request('GET', $url);
         $content = $response->getBody()->getContents();
 
