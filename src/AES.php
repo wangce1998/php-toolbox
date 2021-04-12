@@ -9,22 +9,24 @@ namespace PHPToolbox;
  */
 class AES
 {
-    private $key;
-    private $iv;
+    protected $key;
+    protected $iv;
+    protected $cipherAlgo;
 
-    public function __construct(string $key, string $iv)
+    public function __construct(string $key, string $iv, string $cipherAlgo = 'AES-256-CBC')
     {
         $this->key = $key;
         $this->iv = $iv;
+        $this->cipherAlgo = $cipherAlgo;
     }
 
     public function decrypt($data)
     {
-        return openssl_decrypt(base64_decode($data), 'AES-256-CBC', $this->key, OPENSSL_RAW_DATA, $this->iv);
+        return openssl_decrypt(base64_decode($data), $this->cipherAlgo, $this->key, OPENSSL_RAW_DATA, $this->iv);
     }
 
-    private function encrypt($data): string
+    public function encrypt($data): string
     {
-        return base64_encode(openssl_encrypt($data, 'AES-256-CBC', $this->key, OPENSSL_RAW_DATA, $this->iv));
+        return base64_encode(openssl_encrypt($data, $this->cipherAlgo, $this->key, OPENSSL_RAW_DATA, $this->iv));
     }
 }
