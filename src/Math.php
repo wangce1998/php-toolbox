@@ -4,8 +4,6 @@ namespace PHPToolbox;
 
 /**
  * 数学算法相关
- *
- * @package PHPToolbox
  */
 class Math
 {

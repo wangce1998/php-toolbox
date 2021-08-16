@@ -4,8 +4,6 @@ namespace PHPToolbox;
 
 /**
  * AES加密解密
- *
- * @package PHPToolbox
  */
 class AES
 {
