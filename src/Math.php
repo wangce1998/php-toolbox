@@ -92,4 +92,26 @@ class Math
 
         return $row;
     }
+
+    /**
+     * 求数组下所有可能的子集
+     * 生成数量:(2^n)-1
+     * @see https://leetcode-cn.com/problems/power-set-lcci/
+     *
+     * @param  array  $arr
+     * @return array[]
+     */
+    public static function subsets(array $arr): array
+    {
+        $res = [[]];
+        foreach ($arr as $v) {
+            $sub = [];
+            foreach ($res as $s) {
+                $sub[] = array_merge($s, [$v]);
+            }
+            $res = array_merge($res, $sub);
+        }
+        array_shift($res);
+        return $res;
+    }
 }
